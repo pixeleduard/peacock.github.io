@@ -24,11 +24,22 @@ function incrementScore() {
 }
 
 // Добавляем обработчики событий touchstart и touchend для предотвращения выделения
-document.getElementById("peacock").addEventListener('touchstart', function(event) {
+const peacockElement = document.getElementById("peacock");
+
+peacockElement.addEventListener('touchstart', function(event) {
     event.preventDefault(); // Предотвращаем стандартное поведение
     incrementScore(); // Вызываем функцию клика
 });
 
-document.getElementById("peacock").addEventListener('touchend', function(event) {
+peacockElement.addEventListener('touchend', function(event) {
     event.preventDefault(); // Предотвращаем стандартное поведение
+});
+
+peacockElement.addEventListener('touchmove', function(event) {
+    event.preventDefault(); // Предотвращаем выделение при перемещении
+});
+
+// Также предотвращаем контекстное меню при нажатии
+peacockElement.addEventListener('contextmenu', function(event) {
+    event.preventDefault(); // Отключаем контекстное меню
 });
