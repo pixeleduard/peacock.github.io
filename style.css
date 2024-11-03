@@ -14,12 +14,16 @@ body {
 }
 
 .container {
+    max-width: 300px; /* Максимальная ширина */
+    width: 100%; /* Ширина по умолчанию 100% */
     text-align: center;
     background-color: rgba(255, 255, 255, 0.9);
     border-radius: 15px;
     padding: 40px;
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    margin: auto; /* Центрирование контейнера */
 }
+
 
 .title-box {
     background-color: #8a2be2;
