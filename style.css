@@ -6,7 +6,11 @@ body {
     align-items: center;
     height: 100vh;
     background: linear-gradient(135deg, #74ebd5, #9face6);
-    user-select: none;
+    user-select: none; /* Отключаем выделение текста на всей странице */
+    -webkit-touch-callout: none; /* Отключаем вызов контекстного меню при длительном нажатии */
+    -webkit-user-select: none; /* Отключаем выделение текста на WebKit-браузерах */
+    -moz-user-select: none; /* Отключаем выделение текста на Firefox */
+    -ms-user-select: none; /* Отключаем выделение текста на Internet Explorer */
 }
 
 .container {

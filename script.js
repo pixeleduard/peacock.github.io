@@ -23,5 +23,12 @@ function incrementScore() {
     }
 }
 
-// Добавляем обработчик события для touchstart
-document.getElementById("peacock").addEventListener('touchstart', incrementScore);
+// Добавляем обработчики событий touchstart и touchend для предотвращения выделения
+document.getElementById("peacock").addEventListener('touchstart', function(event) {
+    event.preventDefault(); // Предотвращаем стандартное поведение
+    incrementScore(); // Вызываем функцию клика
+});
+
+document.getElementById("peacock").addEventListener('touchend', function(event) {
+    event.preventDefault(); // Предотвращаем стандартное поведение
+});
