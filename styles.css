@@ -6,6 +6,7 @@ body {
     align-items: center;
     height: 100vh;
     background: linear-gradient(135deg, #74ebd5, #9face6); /* Градиентный фон */
+    user-select: none; /* Отключаем выделение текста на всей странице */
 }
 
 .container {
@@ -53,10 +54,15 @@ h1 {
     height: auto; /* Высота автоматически по соотношению */
     margin: 20px auto;
     transition: transform 0.2s; /* Переход для эффекта нажатия */
+    user-select: none; /* Отключаем выделение текста */
+}
+
+.peacock:active {
+    outline: none; /* Убираем контур при активном состоянии */
 }
 
 .peacock:hover {
-    transform: scale(1.1);
+    transform: scale(1.1); /* Эффект увеличения при наведении */
 }
 
 .peacock img {
