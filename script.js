@@ -1,23 +1,26 @@
+const peacock = document.querySelector('.peacock');
+const scoreDisplay = document.getElementById('score');
 let score = 0;
-let isClicked = false;
-let scale = 1; // Начальный масштаб
+let clickCount = 0;
+let scaleTimeout;
 
-function incrementScore() {
+peacock.addEventListener('click', () => {
+    clickCount++;
     score++;
-    document.getElementById("score").innerText = `Очки: ${score}`;
+    scoreDisplay.textContent = `Очки: ${score}`;
 
-    // Увеличиваем масштаб при каждом клике
-    scale += 0.2; // Увеличение размера
-    document.getElementById("peacock").style.transform = `scale(${scale})`;
-    
-    // Если кликнули, сбрасываем таймер
-    if (!isClicked) {
-        isClicked = true;
-        // Сбрасываем масштаб через 0.3 секунды
-        setTimeout(() => {
-            scale = 1; // Возвращаем к исходному размеру
-            document.getElementById("peacock").style.transform = `scale(${scale})`;
-            isClicked = false;
-        }, 300); // Задержка перед возвращением
-    }
-}
+    // Увеличение павлина
+    peacock.style.transform = `scale(${1 + clickCount * 0.05})`; // Увеличиваем масштаб
+
+    // Сбрасываем увеличение после определенного времени
+    clearTimeout(scaleTimeout);
+    scaleTimeout = setTimeout(() => {
+        peacock.style.transform = 'scale(1)'; // Возвращаем обратно
+        clickCount = 0; // Сбрасываем счетчик кликов
+    }, 300);
+});
+
+// Добавляем обработчик события для предотвращения выделения текста
+peacock.addEventListener('touchstart', (event) => {
+    event.preventDefault(); // Предотвращаем стандартное поведение
+});
