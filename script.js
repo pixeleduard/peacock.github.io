@@ -22,3 +22,6 @@ function incrementScore() {
         }, 300); // Задержка перед возвращением
     }
 }
+
+// Добавляем обработчик события для touchstart
+document.getElementById("peacock").addEventListener('touchstart', incrementScore);
