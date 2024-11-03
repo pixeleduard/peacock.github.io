@@ -7,7 +7,7 @@ function incrementScore() {
     document.getElementById("score").innerText = `Очки: ${score}`;
 
     // Увеличиваем масштаб при каждом клике
-    scale += 51.3; // Увеличение размера
+    scale += 0.2; // Увеличение размера
     document.getElementById("peacock").style.transform = `scale(${scale})`;
     
     // Если кликнули, сбрасываем таймер
