@@ -1,0 +1,65 @@
+body {
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(135deg, #74ebd5, #9face6); /* Градиентный фон */
+}
+
+.container {
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.9); /* Полупрозрачный фон для контейнера */
+    border-radius: 15px; /* Скругленные углы */
+    padding: 40px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Тень для объема */
+}
+
+.title-box {
+    background-color: #8a2be2; /* Фиолетовый фон */
+    border: 5px solid #5a0c9e; /* Темно-фиолетовая обводка */
+    border-radius: 15px; /* Скругленные углы */
+    padding: 15px;
+    margin: 10px 0; /* Отступы для элементов */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Тень для фона текста */
+}
+
+h1 {
+    color: #fff; /* Цвет текста белый */
+    font-family: 'Freckle Face', cursive; /* Мультяшный шрифт */
+    margin: 0; /* Убираем отступы по умолчанию */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Тень для текста */
+}
+
+.score-box {
+    background-color: rgba(255, 255, 255, 0.8); /* Полупрозрачный фон для текста */
+    border-radius: 15px; /* Скругленные углы */
+    padding: 15px;
+    margin: 10px 0; /* Отступы для элементов */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Тень для фона текста */
+}
+
+#score {
+    font-size: 28px;
+    margin: 0; /* Убираем отступы по умолчанию */
+    color: #ff5722; /* Цвет для очков */
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5); /* Тень для текста */
+}
+
+.peacock {
+    cursor: pointer;
+    width: 100px; /* Ширина павлина */
+    height: auto; /* Высота автоматически по соотношению */
+    margin: 20px auto;
+    transition: transform 0.2s; /* Переход для эффекта нажатия */
+}
+
+.peacock:hover {
+    transform: scale(1.1);
+}
+
+.peacock img {
+    width: 100%; /* Адаптивное изображение */
+    height: auto; /* Автоматическая высота для пропорций */
+}
