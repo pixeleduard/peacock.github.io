@@ -55,8 +55,6 @@ h1 {
     margin: 20px auto;
     transition: transform 0.2s; /* Переход для эффекта нажатия */
     user-select: none; /* Отключаем выделение текста */
-    touch-action: manipulation; /* Запрещаем браузеру обрабатывать касания */
-    -webkit-tap-highlight-color: transparent; /* Убираем эффект выделения при нажатии на мобильных устройствах */
 }
 
 .peacock:active {
