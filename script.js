@@ -3,6 +3,7 @@ let isClicked = false;
 let scale = 1; // Начальный масштаб
 
 function incrementScore() {
+    console.log("Клик зарегистрирован!"); // Логируем клик
     score++;
     document.getElementById("score").innerText = `Очки: ${score}`;
 
